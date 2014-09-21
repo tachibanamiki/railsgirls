@@ -12,7 +12,9 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @idea.picture %>
+  <% if @idea.picture.present? %>
+  <%= image_tag(@idea.picture_url, width: 600) %>
+  <% end %>
 </p>
 
 <%= link_to('Edit', edit_idea_path(@idea)) %> |
