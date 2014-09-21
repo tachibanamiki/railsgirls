@@ -1,21 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>名前:</strong>
   <%= @idea.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>説明:</strong>
   <%= @idea.description %>
 </p>
 
 <p>
-  <strong>Picture:</strong>
+  <strong>画像:</strong>
   <% if @idea.picture.present? %>
   <%= image_tag(@idea.picture_url, width: 600) %>
   <% end %>
 </p>
 
-<%= link_to('Edit', edit_idea_path(@idea)) %> |
-<%= link_to 'Back', ideas_path %>
+<%= link_to('編集', edit_idea_path(@idea)) %> |
+<%= link_to '戻る', ideas_path %>
